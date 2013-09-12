@@ -1,7 +1,6 @@
-package runkeeperclient.model;
+package com.github.runkeeperclient.model;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 
 public class FitnessActivity {
     private String[] nearest_teammate_weight;

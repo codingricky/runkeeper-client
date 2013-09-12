@@ -4,10 +4,40 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>runkeeper-client</groupId>
+    <groupId>com.github.runkeeperclient</groupId>
     <artifactId>runkeeper-client</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
+    <name>Runkeeper client</name>
+    <version>0.1-SNAPSHOT</version>
+    <description>Client to access runkeeper's healthgraph api</description>
+    <url>http://github.com/codingricky/runkeeper-client</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:git://github.com/codingricky/runkeeper-client.git
+        </connection>
+        <developerConnection>
+            scm:git:git@github.com:codingricky/codingricky/runkeeper-client.git
+        </developerConnection>
+        <url>git://github.com/codingricky/runkeeper-client.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <id>codingricky</id>
+            <name>Ricky Yim</name>
+            <email>ricky@polymorphsolutions.com.au</email>
+        </developer>
+    </developers>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>

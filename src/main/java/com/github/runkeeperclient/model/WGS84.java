@@ -1,22 +1,22 @@
-package runkeeperclient.model;
+package com.github.runkeeperclient.model;
 
 import java.math.BigDecimal;
 
-public class Image {
+public class WGS84 {
     private BigDecimal timestamp;
     private BigDecimal latitude;
     private BigDecimal longitude;
-    private String uri;
-    private String thumbnail_uri;
+    private BigDecimal altitude;
+    private String type;
 
     @Override
     public String toString() {
-        return "Image{" +
+        return "WGS84{" +
                 "timestamp=" + timestamp +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
-                ", uri='" + uri + '\'' +
-                ", thumbnail_uri='" + thumbnail_uri + '\'' +
+                ", altitude=" + altitude +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

@@ -1,4 +1,4 @@
-package runkeeperclient;
+package com.github.runkeeperclient;
 
 public class ClientException extends RuntimeException {
     public ClientException() {

@@ -1,4 +1,4 @@
-package runkeeperclient;
+package com.github.runkeeperclient;
 
 public interface Callback<T> {
 

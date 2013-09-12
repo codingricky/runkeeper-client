@@ -1,4 +1,4 @@
-package runkeeperclient.model;
+package com.github.runkeeperclient.model;
 
 /**
  * {"strength_training_activities":"/strengthTrainingActivities","weight":"/weight",

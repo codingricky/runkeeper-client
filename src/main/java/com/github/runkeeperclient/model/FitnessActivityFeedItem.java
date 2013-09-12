@@ -1,4 +1,4 @@
-package runkeeperclient.model;
+package com.github.runkeeperclient.model;
 
 
 import java.math.BigDecimal;

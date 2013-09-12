@@ -1,4 +1,4 @@
-package runkeeperclient;
+package com.github.runkeeperclient;
 
 public class SecurityException extends ClientException {
     public SecurityException() {

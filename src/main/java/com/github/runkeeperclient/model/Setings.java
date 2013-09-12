@@ -1,4 +1,4 @@
-package runkeeperclient.model;
+package com.github.runkeeperclient.model;
 
 public class Setings {
     private boolean post_nutrition_twitter;

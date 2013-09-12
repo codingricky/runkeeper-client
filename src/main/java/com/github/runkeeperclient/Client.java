@@ -1,4 +1,4 @@
-package runkeeperclient;
+package com.github.runkeeperclient;
 
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
@@ -7,10 +7,10 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-import runkeeperclient.model.FitnessActivityFeed;
-import runkeeperclient.model.FitnessActivity;
-import runkeeperclient.model.User;
-import runkeeperclient.model.WeightFeed;
+import com.github.runkeeperclient.model.FitnessActivityFeed;
+import com.github.runkeeperclient.model.FitnessActivity;
+import com.github.runkeeperclient.model.User;
+import com.github.runkeeperclient.model.WeightFeed;
 
 import java.io.IOException;
 
