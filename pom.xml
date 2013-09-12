@@ -33,11 +33,6 @@
             <email>ricky@polymorphsolutions.com.au</email>
         </developer>
     </developers>
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
