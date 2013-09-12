@@ -1,4 +1,4 @@
-package com.github.runkeeperclient;
+package com.github.codingricky.runkeeperclient;
 
 import com.google.gson.Gson;
 import org.apache.http.HttpEntity;

@@ -1,4 +1,4 @@
-package com.github.runkeeperclient.server;
+package com.github.codingricky.runkeeperclient.server;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpStatus;

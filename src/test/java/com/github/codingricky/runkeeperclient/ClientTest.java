@@ -1,4 +1,4 @@
-package com.github.runkeeperclient;
+package com.github.codingricky.runkeeperclient;
 
 import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
@@ -8,12 +8,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
-import com.github.runkeeperclient.model.FitnessActivity;
-import com.github.runkeeperclient.model.FitnessActivityFeed;
-import com.github.runkeeperclient.model.FitnessActivityFeedItem;
-import com.github.runkeeperclient.model.User;
-import com.github.runkeeperclient.model.WeightFeed;
-import com.github.runkeeperclient.server.FakeRunkeeperServer;
+import com.github.codingricky.runkeeperclient.model.FitnessActivity;
+import com.github.codingricky.runkeeperclient.model.FitnessActivityFeed;
+import com.github.codingricky.runkeeperclient.model.FitnessActivityFeedItem;
+import com.github.codingricky.runkeeperclient.model.User;
+import com.github.codingricky.runkeeperclient.model.WeightFeed;
+import com.github.codingricky.runkeeperclient.server.FakeRunkeeperServer;
 
 import java.io.IOException;
 import java.io.InputStream;

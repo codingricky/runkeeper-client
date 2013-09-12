@@ -1,4 +1,4 @@
-package com.github.runkeeperclient.model;
+package com.github.codingricky.runkeeperclient.model;
 
 public class FitnessActivityFeed {
 
