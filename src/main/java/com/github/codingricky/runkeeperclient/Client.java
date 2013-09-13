@@ -1,5 +1,6 @@
 package com.github.codingricky.runkeeperclient;
 
+import com.github.codingricky.runkeeperclient.model.TeamFeed;
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -78,12 +79,21 @@ public class Client {
         return execute(get, WeightFeed.class, null);
     }
 
+    public TeamFeed getTeamFeed(String resource) {
+        HttpGet get = createHttpGetRequest(resource, ContentTypes.TEAM_FEED);
+        return execute(get, TeamFeed.class);
+    }
+
     private HttpGet createHttpGetRequest(String resource, String contentType) {
         String fullUrl = String.format("%s%s", url, resource);
         HttpGet get = new HttpGet(fullUrl);
         get.addHeader("Accept", contentType);
         get.addHeader("Authorization", "Bearer " + accessToken);
         return get;
+    }
+
+    private <T> T execute(HttpGet get, Class<T> clazz) {
+        return execute(get, clazz, null);
     }
 
     private <T> T execute(HttpGet get, Class<T> clazz, Callback<T> callback) {
@@ -106,4 +116,5 @@ public class Client {
             throw new ClientException(e);
         }
     }
+
 }

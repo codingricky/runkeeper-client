@@ -37,6 +37,7 @@ public class ContentTypes {
     public static final String SETTINGS = "application/vnd.com.runkeeper.Settings+json";
     public static final String SLEEP = "application/vnd.com.runkeeper.Sleep+json";
     public static final String SLEEP_SET = "application/vnd.com.runkeeper.SleepSet+json";
+    public static final String TEAM_FEED = "application/vnd.com.runkeeper.TeamFeed+json";
     public static final String STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.StrengthTrainingActivity+json";
     public static final String USER =  "application/vnd.com.runkeeper.User+json";
     public static final String WEIGHT =  "application/vnd.com.runkeeper.Weight+json";
