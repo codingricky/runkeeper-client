@@ -1,6 +1,6 @@
 package com.github.codingricky.runkeeperclient.model;
 
-public class Setings {
+public class Settings {
     private boolean post_nutrition_twitter;
     private boolean post_sleep_twitter;
     private String weight_units;
