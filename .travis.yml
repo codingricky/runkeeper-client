@@ -4,7 +4,8 @@ script: mvn deploy --settings settings/settings.xml
 
 branches:
   only:
-  - develop
+  - master
+
 env:
   global:
   - secure: EGVIiUooOgMFYqtPJ8KT6f5rNGLAXZKw+jBvVNcBscTwS8C3/81O1JZ6D5NO2nVVNCYDOpQwG/1b2jPJqhtTlTOg25VR3Y5hnzURfqF11JtbEgT9MXr77/3rsqwc7PfgTU9vUFyR0tkUbgAK0i4KipZ34sngPsFeNp9mEKKl5FI=
