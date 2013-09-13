@@ -3,9 +3,14 @@ jdk:
   - oraclejdk7
   - openjdk7
   - openjdk6
+matrix:
+  include:
+  - jdk: oraclejdk7
+    before_install: git clone -b travis `git config --get remote.origin.url` target/travis
+    after_success: mvn deploy --settings target/travis/settings/settings.xml
+  - jdk: openjdk7
+  - jdk: openjdk6
 
-before_install: git clone -b travis `git config --get remote.origin.url` target/travis
-after_success: mvn deploy --settings target/travis/settings/settings.xml
 
 branches:
   only:
