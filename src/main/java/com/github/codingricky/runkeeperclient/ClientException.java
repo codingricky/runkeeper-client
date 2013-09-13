@@ -16,8 +16,4 @@ public class ClientException extends RuntimeException {
     public ClientException(Throwable cause) {
         super(cause);
     }
-
-    protected ClientException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
 }
