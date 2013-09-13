@@ -2,3 +2,15 @@ language: java
 jdk:
   - oraclejdk7
   - openjdk7
+
+before_install: git clone -b travis `git config --get remote.origin.url` target/travis
+script: mvn deploy --settings target/travis/settings/settings.xml
+
+branches:
+  only:
+  - master
+
+env:
+  global:
+  - secure: EGVIiUooOgMFYqtPJ8KT6f5rNGLAXZKw+jBvVNcBscTwS8C3/81O1JZ6D5NO2nVVNCYDOpQwG/1b2jPJqhtTlTOg25VR3Y5hnzURfqF11JtbEgT9MXr77/3rsqwc7PfgTU9vUFyR0tkUbgAK0i4KipZ34sngPsFeNp9mEKKl5FI=
+  - secure: PW53pUsnsHZDPnGnu8IT0wrtumMUQdxQ4PnmNUgb2UYVETUGweo9jrdzbc8N8juLjbThLtWMv7JKASiswGO78dqr+3Z5scHm7GnFHNGGXQdKHd7sxpqIrpbd1L8KV82/8oUu8gqW8hQV7brkh/QERAgKIuNt6t+fcX87xtLVu2I=
