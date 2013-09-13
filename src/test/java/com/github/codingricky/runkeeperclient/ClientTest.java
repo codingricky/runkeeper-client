@@ -53,8 +53,7 @@ public class ClientTest {
 
     @Test
     public void weightFeedShouldBeReturned() {
-        User user = client.getUser();
-        WeightFeed weightFeed = client.getWeightFeed(user.getWeight());
+        WeightFeed weightFeed = client.getWeightFeed();
         assertObjectEqualsExpectedJson(weightFeed, "responses/weight.json");
     }
 
@@ -66,15 +65,13 @@ public class ClientTest {
 
     @Test
     public void fitnessActivityFeedShouldBeReturned() throws IOException, JSONException {
-        User user = client.getUser();
-        FitnessActivityFeed fitnessActivities = client.getFitnessActivities(user);
+        FitnessActivityFeed fitnessActivities = client.getFitnessActivities();
         assertObjectEqualsExpectedJson(fitnessActivities, "responses/fitnessActivityFeed.json");
     }
 
     @Test
     public void fitnessActivityShouldBeSet() {
-        User user = client.getUser();
-        FitnessActivityFeed fitnessActivities = client.getFitnessActivities(user);
+        FitnessActivityFeed fitnessActivities = client.getFitnessActivities();
         for (FitnessActivityFeedItem feed : fitnessActivities.getItems()) {
             FitnessActivity fitnessActivity = client.getFitnessActivity(feed.getUri());
             assertObjectEqualsExpectedJson(fitnessActivity, "responses" + feed.getUri() + ".json");
@@ -83,8 +80,7 @@ public class ClientTest {
 
     @Test
     public void teamFeedShouldBeSet() {
-        User user = client.getUser();
-        TeamFeed teamFeed = client.getTeamFeed(user.getTeam());
+        TeamFeed teamFeed = client.getTeamFeed();
         assertObjectEqualsExpectedJson(teamFeed, "responses/team.json");
     }
 

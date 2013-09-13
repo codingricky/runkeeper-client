@@ -25,6 +25,8 @@ public class Client {
     private final String url;
     private final Gson gson;
 
+    private User user;
+
     public Client(String accessToken) {
         this(PRODUCTION_URL, accessToken);
     }
@@ -34,6 +36,7 @@ public class Client {
         this.accessToken = accessToken;
         httpClient = new DefaultHttpClient();
         gson = new Gson();
+        user = getUser();
     }
 
     public User getUser(Callback<User> callback) {
@@ -45,24 +48,13 @@ public class Client {
         return getUser(null);
     }
 
-    public String getUserJson() {
-        final String[] userJson = new String[1];
-        getUser(new Callback<User>() {
-            @Override
-            public void success(User result, String json) {
-                userJson[0] = json;
-            }
-        });
-        return userJson[0];
-    }
-
-    public FitnessActivityFeed getFitnessActivities(User user, Callback<FitnessActivityFeed> callback) {
+    public FitnessActivityFeed getFitnessActivities(Callback<FitnessActivityFeed> callback) {
         HttpGet get = createHttpGetRequest(user.getFitnessActivities(), ContentTypes.FITNESS_ACTIVITY_FEED);
         return execute(get, FitnessActivityFeed.class, callback);
     }
 
-    public FitnessActivityFeed getFitnessActivities(User user) {
-        return getFitnessActivities(user, null);
+    public FitnessActivityFeed getFitnessActivities() {
+        return getFitnessActivities(null);
     }
 
     public FitnessActivity getFitnessActivity(String resource, Callback<FitnessActivity> callback) {
@@ -74,13 +66,13 @@ public class Client {
         return getFitnessActivity(resource, null);
     }
 
-    public WeightFeed getWeightFeed(String resource) {
-        HttpGet get = createHttpGetRequest(resource, ContentTypes.WEIGHT);
+    public WeightFeed getWeightFeed() {
+        HttpGet get = createHttpGetRequest(user.getWeight(), ContentTypes.WEIGHT);
         return execute(get, WeightFeed.class, null);
     }
 
-    public TeamFeed getTeamFeed(String resource) {
-        HttpGet get = createHttpGetRequest(resource, ContentTypes.TEAM_FEED);
+    public TeamFeed getTeamFeed() {
+        HttpGet get = createHttpGetRequest(user.getTeam(), ContentTypes.TEAM_FEED);
         return execute(get, TeamFeed.class);
     }
 
