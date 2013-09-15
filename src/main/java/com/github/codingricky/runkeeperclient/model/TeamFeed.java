@@ -4,4 +4,12 @@ public class TeamFeed {
 
     private TeamFeedItem[] items;
     private int size;
+
+    public TeamFeedItem[] getItems() {
+        return items;
+    }
+
+    public int getSize() {
+        return size;
+    }
 }

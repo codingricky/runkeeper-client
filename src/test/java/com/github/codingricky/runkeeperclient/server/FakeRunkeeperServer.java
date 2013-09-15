@@ -57,11 +57,13 @@ public class FakeRunkeeperServer {
                 return serveFile("fitnessActivityFeed", response);
             }
         });
-        get(new Route("/fitnessActivities/:id") {
+
+        get(new Route("/:resource/:id") {
             @Override
             public Object handle(Request request, Response response) {
-                Integer fitnessActivityId = Integer.valueOf(request.params(":id"));
-                return serveFile(String.format("fitnessActivities/%d", fitnessActivityId), response);
+                String resource = request.params(":resource");
+                Integer id = Integer.valueOf(request.params(":id"));
+                return serveFile(String.format("%s/%d", resource, id), response);
             }
         });
 

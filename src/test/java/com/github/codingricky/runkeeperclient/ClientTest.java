@@ -1,6 +1,7 @@
 package com.github.codingricky.runkeeperclient;
 
 import com.github.codingricky.runkeeperclient.model.TeamFeed;
+import com.github.codingricky.runkeeperclient.model.TeamFeedItem;
 import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONException;
@@ -82,6 +83,14 @@ public class ClientTest {
     public void teamFeedShouldBeSet() {
         TeamFeed teamFeed = client.getTeamFeed();
         assertObjectEqualsExpectedJson(teamFeed, "responses/team.json");
+    }
+
+    @Test
+    public void teamMemberShouldBeSet() {
+        TeamFeed teamFeed = client.getTeamFeed();
+        for (TeamFeedItem item : teamFeed.getItems()) {
+            assertObjectEqualsExpectedJson(client.getTeamMember(item.getUrl()), "responses/" + item.getUrl() + ".json");
+        }
     }
 
     private <T> void assertObjectEqualsExpectedJson(T actual, String filePath) {

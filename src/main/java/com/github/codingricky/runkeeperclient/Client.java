@@ -1,5 +1,6 @@
 package com.github.codingricky.runkeeperclient;
 
+import com.github.codingricky.runkeeperclient.model.TeamMember;
 import com.github.codingricky.runkeeperclient.model.TeamFeed;
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
@@ -76,6 +77,11 @@ public class Client {
         return execute(get, TeamFeed.class);
     }
 
+    public TeamMember getTeamMember(String resource) {
+        HttpGet get = createHttpGetRequest(resource, ContentTypes.MEMBER);
+        return execute(get, TeamMember.class);
+    }
+
     private HttpGet createHttpGetRequest(String resource, String contentType) {
         String fullUrl = String.format("%s%s", url, resource);
         HttpGet get = new HttpGet(fullUrl);
@@ -108,5 +114,4 @@ public class Client {
             throw new ClientException(e);
         }
     }
-
 }
