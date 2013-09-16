@@ -16,7 +16,7 @@ public class User {
     private String sleep;
     private String fitness_activities;
     private String change_log;
-    private Long userID;
+    private long userID;
     private String nutrition;
     private String general_measurements;
     private String background_activities;
@@ -55,7 +55,7 @@ public class User {
         return change_log;
     }
 
-    public Long getUserID() {
+    public long getUserID() {
         return userID;
     }
 

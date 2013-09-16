@@ -1,0 +1,311 @@
+[
+    {
+        "stats": [
+            {
+                "stat_type": "BEST_ACTIVITY",
+                "value": 42.5379705908585
+            },
+            {
+                "stat_type": "BEST_WEEK",
+                "value": 105.03307141310702,
+                "date": "Sun, 21 Jul 2013 00:00:00"
+            },
+            {
+                "stat_type": "LAST_WEEK",
+                "value": 40.21039684109316
+            },
+            {
+                "stat_type": "THIS_WEEK",
+                "value": 0
+            },
+            {
+                "stat_type": "BEST_MONTH",
+                "value": 263.92197427854757,
+                "date": "Mon, 1 Jul 2013 00:00:00"
+            },
+            {
+                "stat_type": "LAST_MONTH",
+                "value": 230.69041135013907
+            },
+            {
+                "stat_type": "THIS_MONTH",
+                "value": 80.96171846204402
+            },
+            {
+                "stat_type": "OVERALL",
+                "value": 5673563.28919646
+            }
+        ],
+        "activity_type": "Running"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Cycling"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Mountain Biking"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Walking"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Hiking"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Downhill Skiing"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Cross-Country Skiing"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Snowboarding"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Skating"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Swimming"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Wheelchair"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Rowing"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Elliptical"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Other"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Yoga"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Pilates"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "CrossFit"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Spinning"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Zumba"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Barre"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Group Workout"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Dance"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Bootcamp"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Boxing / MMA"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Meditation"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Strength Training"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Circuit Training"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Core Strengthening"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Arc Trainer"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Stairmaster / Stepwell"
+    },
+    {
+        "stats": [
+            {
+                "stat_type": "OVERALL",
+                "value": 0
+            }
+        ],
+        "activity_type": "Sports"
+    }
+]

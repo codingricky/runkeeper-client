@@ -1,8 +1,10 @@
 package com.github.codingricky.runkeeperclient;
 
+import com.github.codingricky.runkeeperclient.model.Record;
 import com.github.codingricky.runkeeperclient.model.TeamMember;
 import com.github.codingricky.runkeeperclient.model.TeamFeed;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -15,6 +17,9 @@ import com.github.codingricky.runkeeperclient.model.User;
 import com.github.codingricky.runkeeperclient.model.WeightFeed;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.Collection;
+import java.util.List;
 
 public class Client {
 
@@ -80,6 +85,25 @@ public class Client {
     public TeamMember getTeamMember(String resource) {
         HttpGet get = createHttpGetRequest(resource, ContentTypes.MEMBER);
         return execute(get, TeamMember.class);
+    }
+
+    public List<Record> getRecords() {
+        HttpGet get = createHttpGetRequest(user.getRecords(), ContentTypes.RECORDS);
+        Type collectionType = new TypeToken<Collection<Record>>(){}.getType();
+        try {
+            HttpResponse response = httpClient.execute(get);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode == HttpStatus.SC_OK) {
+                String entity = EntityUtils.toString(response.getEntity());
+                return gson.fromJson(entity, collectionType);
+            } else if (statusCode == HttpStatus.SC_UNAUTHORIZED) {
+                throw new SecurityException();
+            } else {
+                throw new ClientException("Unexpected statusCode " + statusCode);
+            }
+        } catch (IOException e) {
+            throw new ClientException(e);
+        }
     }
 
     private HttpGet createHttpGetRequest(String resource, String contentType) {
