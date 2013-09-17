@@ -1,6 +1,7 @@
 package com.github.codingricky.runkeeperclient;
 
 import com.github.codingricky.runkeeperclient.model.Record;
+import com.github.codingricky.runkeeperclient.model.Settings;
 import com.github.codingricky.runkeeperclient.model.TeamMember;
 import com.github.codingricky.runkeeperclient.model.TeamFeed;
 import com.google.gson.Gson;
@@ -104,6 +105,11 @@ public class Client {
         } catch (IOException e) {
             throw new ClientException(e);
         }
+    }
+
+    public Settings getSettings() {
+        HttpGet get = createHttpGetRequest(user.getSettings(), ContentTypes.SETTINGS);
+        return execute(get, Settings.class);
     }
 
     private HttpGet createHttpGetRequest(String resource, String contentType) {

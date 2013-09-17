@@ -128,7 +128,7 @@
                 <version>2.16</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <testing.accessToken>${accessToken}</testing.accessToken>
+                        <accessToken>${accessToken}</accessToken>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

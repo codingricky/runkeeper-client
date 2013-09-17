@@ -1,6 +1,7 @@
 package com.github.codingricky.runkeeperclient;
 
 import com.github.codingricky.runkeeperclient.model.Record;
+import com.github.codingricky.runkeeperclient.model.Settings;
 import com.github.codingricky.runkeeperclient.model.TeamFeed;
 import com.github.codingricky.runkeeperclient.model.TeamFeedItem;
 import com.google.gson.Gson;
@@ -99,6 +100,12 @@ public class ClientTest {
     public void recordsShouldBeSet() {
         List<Record> records = client.getRecords();
         assertObjectEqualsExpectedJson(records, "responses/records.json");
+    }
+
+    @Test
+    public void settingsShouldBeSet() {
+        Settings settings = client.getSettings();
+        assertObjectEqualsExpectedJson(settings, "responses/settings.json");
     }
 
     private <T> void assertObjectEqualsExpectedJson(T actual, String filePath) {

@@ -25,4 +25,10 @@ public class Settings {
     private String share_map;
     private boolean foursquare_connected;
     private String share_sleep;
+    private boolean facebook_connected;
+    private boolean post_general_measurements_twitter;
+    private boolean post_nutrition_facebook;
+    private String share_diabetes;
+    private String share_general_measurements;
+    private boolean twitter_connected;
 }

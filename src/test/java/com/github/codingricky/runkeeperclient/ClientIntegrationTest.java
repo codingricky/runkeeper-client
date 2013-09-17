@@ -1,6 +1,7 @@
 package com.github.codingricky.runkeeperclient;
 
 import com.github.codingricky.runkeeperclient.model.FitnessActivityFeed;
+import com.github.codingricky.runkeeperclient.model.Settings;
 import com.github.codingricky.runkeeperclient.model.TeamFeed;
 import org.apache.commons.lang.StringUtils;
 import org.junit.Assume;
@@ -16,7 +17,7 @@ public class ClientIntegrationTest {
     @Before
     public void before() {
         String accessToken = System.getProperty("accessToken");
-        Assume.assumeTrue(StringUtils.isNotBlank(accessToken));
+        Assume.assumeTrue("accessToken not set", StringUtils.isNotBlank(accessToken));
         client = new Client(accessToken);
     }
 
@@ -46,5 +47,11 @@ public class ClientIntegrationTest {
     public void getTeamFeed() {
         TeamFeed teamFeed = client.getTeamFeed();
         assertThat(teamFeed).isNotNull();
+    }
+
+    @Test
+    public void getSettings() {
+        Settings settings = client.getSettings();
+        assertThat(settings).isNotNull();
     }
 }
