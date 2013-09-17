@@ -1,7 +1,7 @@
 package com.github.codingricky.runkeeperclient;
 
-import com.github.codingricky.runkeeperclient.model.User;
-import com.github.codingricky.runkeeperclient.model.WeightFeed;
+import com.github.codingricky.runkeeperclient.model.FitnessActivityFeed;
+import com.github.codingricky.runkeeperclient.model.TeamFeed;
 import org.apache.commons.lang.StringUtils;
 import org.junit.Assume;
 import org.junit.Before;
@@ -11,23 +11,40 @@ import static org.fest.assertions.Assertions.assertThat;
 
 public class ClientIntegrationTest {
 
-    private String accessToken;
+    private Client client;
 
     @Before
     public void before() {
-        accessToken = System.getProperty("testing.accessToken");
+        String accessToken = System.getProperty("accessToken");
         Assume.assumeTrue(StringUtils.isNotBlank(accessToken));
+        client = new Client(accessToken);
     }
 
     @Test
     public void getUser() {
-        User user = new Client(accessToken).getUser();
-        assertThat(user).isNotNull();
+        assertThat(client.getUser()).isNotNull();
     }
 
     @Test
-    public void getWeight() {
-        WeightFeed weightFeed = new Client(accessToken).getWeightFeed();
-        assertThat(weightFeed).isNotNull();
+    public void getWeightFeed() {
+        assertThat(client.getWeightFeed()).isNotNull();
+    }
+
+    @Test
+    public void getFitnessActivities() {
+        FitnessActivityFeed fitnessActivities = client.getFitnessActivities();
+        assertThat(fitnessActivities).isNotNull();
+        assertThat(client.getFitnessActivity(fitnessActivities.getItems()[0].getUri())).isNotNull();
+    }
+
+    @Test
+    public void getRecords() {
+        assertThat(client.getRecords()).isNotNull();
+    }
+
+    @Test
+    public void getTeamFeed() {
+        TeamFeed teamFeed = client.getTeamFeed();
+        assertThat(teamFeed).isNotNull();
     }
 }
