@@ -41,6 +41,7 @@ public class ContentTypes {
     public static final String STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.StrengthTrainingActivity+json";
     public static final String USER =  "application/vnd.com.runkeeper.User+json";
     public static final String WEIGHT =  "application/vnd.com.runkeeper.Weight+json";
+    public static final String WEIGHT_FEED =  "application/vnd.com.runkeeper.WeightFeed+json";
     public static final String WEIGHT_GOAL =  "application/vnd.com.runkeeper.WeightGoal+json";
     public static final String WEIGHT_SET =  "application/vnd.com.runkeeper.WeightSet+json";
 }

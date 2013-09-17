@@ -73,7 +73,7 @@ public class Client {
     }
 
     public WeightFeed getWeightFeed() {
-        HttpGet get = createHttpGetRequest(user.getWeight(), ContentTypes.WEIGHT);
+        HttpGet get = createHttpGetRequest(user.getWeight(), ContentTypes.WEIGHT_FEED);
         return execute(get, WeightFeed.class, null);
     }
 
