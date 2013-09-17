@@ -25,11 +25,11 @@ public class FakeRunkeeperServer {
 
     private static final Logger logger = LoggerFactory.getLogger(FakeRunkeeperServer.class);
 
-    public static void start() {
+    public static void start() throws InterruptedException {
         start(null);
     }
 
-    public static void start(final String acceptedToken) {
+    public static void start(final String acceptedToken) throws InterruptedException {
         logger.info("starting FakeRunkeeperServer...");
 
         setPort(PORT);
@@ -74,6 +74,7 @@ public class FakeRunkeeperServer {
                 return serveFile(resource, response);
             }
         });
+        Thread.sleep(1000);
     }
 
     private static Object serveFile(String file, Response response) {
@@ -102,7 +103,7 @@ public class FakeRunkeeperServer {
         SparkStopper.stop();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         start();
     }
 
