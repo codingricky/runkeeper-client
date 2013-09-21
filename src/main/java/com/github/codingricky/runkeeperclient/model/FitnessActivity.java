@@ -18,7 +18,7 @@ public class FitnessActivity {
     private BigDecimal total_calories;
     private String[] nearest_teammate_nutrition;
     private long userID;
-    private long duration;
+    private BigDecimal duration;
     private HeartRate[] heart_rate;
     private String source;
     private String web;
