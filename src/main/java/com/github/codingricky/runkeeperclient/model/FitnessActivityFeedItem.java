@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 public class FitnessActivityFeedItem {
 
-    private long duration;
+    private BigDecimal duration;
     private BigDecimal total_distance;
     private long total_calories;
     private boolean has_path;
