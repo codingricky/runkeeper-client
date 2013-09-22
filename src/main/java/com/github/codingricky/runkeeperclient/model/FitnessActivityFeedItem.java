@@ -15,7 +15,7 @@ public class FitnessActivityFeedItem {
     private String type;
     private String uri;
 
-    public long getDuration() {
+    public BigDecimal getDuration() {
         return duration;
     }
 
