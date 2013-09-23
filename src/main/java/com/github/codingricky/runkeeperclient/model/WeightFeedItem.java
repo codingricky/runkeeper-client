@@ -9,4 +9,6 @@ public class WeightFeedItem {
     private BigDecimal mass_weight;
     private BigDecimal fat_percent;
     private BigDecimal free_mass;
+    private String next;
+    private String previous;
 }

@@ -4,9 +4,6 @@ import java.math.BigDecimal;
 
 public class FitnessActivity {
     private String[] nearest_teammate_weight;
-    private String next;
-    private String previous;
-    private String nearest_nutrition;
     private String equipment;
     private String type;
     private String share;
@@ -36,4 +33,7 @@ public class FitnessActivity {
     private BigDecimal total_distance;
     private String share_map;
     private BigDecimal climb;
+    private String next;
+    private String previous;
+    private String nearest_nutrition;
 }
