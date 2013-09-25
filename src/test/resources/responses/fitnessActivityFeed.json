@@ -120,4 +120,6 @@
         "type": "Running",
         "uri": "/fitnessActivities/64698493"
     }
-], "size": 11}
+],
+    "next": "/fitnessActivities?page=1&pageSize=25&noEarlierThan=1970-01-01&noLaterThan=2013-09-27&modifiedNoEarlierThan=1970-01-01&modifiedNoLaterThan=2013-09-27",
+    "size": 11}
