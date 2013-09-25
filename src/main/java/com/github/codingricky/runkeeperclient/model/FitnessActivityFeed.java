@@ -10,4 +10,12 @@ public class FitnessActivityFeed {
     public FitnessActivityFeedItem[] getItems() {
         return items;
     }
+
+    public String getNext() {
+        return next;
+    }
+
+    public String getPrevious() {
+        return previous;
+    }
 }
