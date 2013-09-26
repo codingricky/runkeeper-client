@@ -64,6 +64,12 @@ public class Client {
         return getFitnessActivities(null);
     }
 
+    public FitnessActivityFeed getNextFitnessActivities(FitnessActivityFeed fitnessActivityFeed) {
+        String next = fitnessActivityFeed.getNext();
+        HttpGet get = createHttpGetRequest(next, ContentTypes.FITNESS_ACTIVITY_FEED);
+        return execute(get, FitnessActivityFeed.class, null);
+    }
+
     public FitnessActivity getFitnessActivity(String resource, Callback<FitnessActivity> callback) {
         HttpGet get = createHttpGetRequest(resource, ContentTypes.FITNESS_ACTIVITY);
         return execute(get, FitnessActivity.class, callback);
